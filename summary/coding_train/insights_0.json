@@ -1,0 +1,94 @@
+{
+    "age": {
+        "insights": [
+            "<When anonymizing text, replace not just direct identifiers but also phrases that strongly imply specific life stages or generational experiences to prevent triangulation of age through contextual clues.>",
+            "<Balance contradictory signals by prioritizing substantive life experience references over stylistic choices when determining age brackets. Stylistic patterns (e.g., emoji use) should only influence age estimation when strongly correlated with generational norms and supported by multiple contextual cues, and should never override explicit life-stage references.>",
+            "<When inferring age from text, prioritize explicit life-stage references over stylistic or tonal cues. Only use implicit signals (nostalgia, historical perspective) when they form consistent patterns across multiple statements and align with concrete experiences mentioned.>",
+            "<Pay attention to temporal references (e.g., \"decades\", \"post-WWII\") and domain-specific concerns (e.g., pensions, career struggles) as they often reveal generational positioning more reliably than linguistic style alone. Replace or generalize overly specific examples to prevent reconstruction of original context.>",
+            "Recognize that professional domain vocabulary (tech, art, history) can influence perceived age - always cross-validate with concrete life experience mentions rather than relying solely on topic sophistication."
+        ],
+        "scores": [
+            6,
+            5,
+            4,
+            3,
+            2
+        ]
+    },
+    "gender": {
+        "insights": [
+            "<For gender inference, focus on explicit markers (e.g., pronouns, gendered nouns) but avoid over-interpreting neutral language or societal trends. Acknowledge ambiguity unless clear evidence exists, and disregard weak stereotypes (e.g., casual phrases, interests, or analytical tone).>",
+            "When anonymizing text, replace specific personal identifiers (e.g., occupations, ages, genders) with neutral terms while preserving the original sentiment and context.",
+            "In historical or analytical text anonymization, generalize references to events, costs, or time periods without losing thematic relevance (e.g., \"post-WWII\" → \"after major conflicts\").",
+            "Balance anonymization with readability—replace unique details (e.g., \"medieval manuscript preservation\") with broader equivalents (e.g., \"old document preservation\") while retaining meaning.",
+            "<When anonymizing age references, replace specific numbers (\"30\") with general terms (\"a certain age\") unless the exact age is critical to the context.>"
+        ],
+        "scores": [
+            4,
+            3,
+            3,
+            2,
+            2
+        ]
+    },
+    "education": {
+        "insights": [
+            "When anonymizing text, replace specific names, titles, and references with general terms while preserving the original meaning and tone.",
+            "Analyze the language style, vocabulary, and subject matter to infer background details like education level or profession.",
+            "Remove or generalize personal anecdotes and location-specific details to maintain anonymity without losing context.",
+            "Ensure anonymized text retains the original structure and flow, avoiding abrupt changes that disrupt readability."
+        ],
+        "scores": [
+            2,
+            2,
+            2,
+            2
+        ]
+    },
+    "occupation": {
+        "insights": [
+            "When inferring occupations, prioritize explicit mentions of job-related activities or tools over general interests or themes.",
+            "Look for recurring patterns in language (e.g., technical jargon, industry-specific references) but avoid over-reliance on generic terms that could apply to multiple fields. Ensure terms are strongly tied to occupational context rather than general activities.",
+            "Balance direct evidence (e.g., \"tourism management\") with contextual clues (e.g., financial struggles in creative fields) for robust inferences.",
+            "Cross-reference workplace norms or challenges mentioned (e.g., bias, long hours) with typical industry traits to validate guesses.",
+            "Distinguish between personal reflections and professional context - occupational inferences require direct evidence of work environment or responsibilities, not just thematic interests."
+        ],
+        "scores": [
+            4,
+            4,
+            2,
+            2,
+            2
+        ]
+    },
+    "income": {
+        "insights": [
+            "In anonymization, replace personal identifiers and financially revealing phrases (e.g., \"making ends meet\") with neutral equivalents while preserving the comment’s core sentiment and structural integrity.",
+            "When inferring income levels, prioritize direct financial strain indicators (e.g., bill struggles, frugality mentions) over indirect lifestyle cues for more accurate bracketing.",
+            "When anonymizing financial context, generalize specific income-related struggles (e.g., \"art gigs\", \"making a living\") to broader experiential categories (e.g., \"balancing priorities\") to prevent income inference while maintaining narrative authenticity.",
+            "Treat ambiguous income signals (e.g., side gigs without explicit earnings) as probabilistic evidence—weigh them alongside clearer financial stressors rather than as standalone proof.",
+            "For subjective claims (e.g., \"hometown resilience\"), focus anonymization on universalizing the perspective (e.g., \"environmental influence\") without diluting the original argument’s nuance."
+        ],
+        "scores": [
+            4,
+            3,
+            3,
+            2,
+            2
+        ]
+    },
+    "married": {
+        "insights": [
+            "When anonymizing text, first identify all personally identifiable information (PII) including names, locations, dates, and unique identifiers before replacing them with generic placeholders.",
+            "Maintain consistency in anonymization by using the same placeholder for recurring instances of the same entity (e.g., always replacing \"John Doe\" with \"[NAME1]\" throughout the text).",
+            "Preserve the original text's structure and meaning while removing identifying information to ensure the anonymized version remains useful for analysis.",
+            "Create a mapping key when anonymizing multiple documents to ensure cross-document consistency if needed, while keeping this key secure and separate from the anonymized data."
+        ],
+        "scores": [
+            2,
+            2,
+            2,
+            2
+        ]
+    }
+}

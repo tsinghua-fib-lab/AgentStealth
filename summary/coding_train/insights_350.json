@@ -1,0 +1,130 @@
+{
+    "age": {
+        "insights": [
+            "<When anonymizing text, replace or generalize all direct identifiers, life-stage references, and nostalgic/temporal phrases (e.g., \"back when...\", \"post-exam\") to prevent age triangulation. Prioritize removing contextually revealing markers over preserving stylistic tone.>",
+            "<Balance contradictory signals by removing life-stage terms, temporal comparisons, and informal language. Replace with neutral equivalents that don’t imply experience levels or generational positioning. Generalize domain-specific references (e.g., software names → \"creative tools\") while preserving core meaning. Remove nostalgic cues that enable contextual reconstruction, even if subtle.>",
+            "<When analyzing text for age signals, first identify explicit temporal markers (dates, life-stage references), then contextual indicators (technology, cultural references). Use linguistic style only as tertiary evidence when primary indicators are absent. Always neutralize comparative statements while preserving core meaning.>",
+            "<When anonymizing, replace culturally or generationally specific references (e.g., slang, niche trends, brand names) with broader equivalents while preserving core meaning. Remove indirect nostalgic cues (e.g., \"wish I could go back\") and temporal comparisons (e.g., \"back then\") that enable contextual reconstruction. Prioritize neutralization over stylistic preservation when signals conflict, and ensure domain-specific references are generalized enough to prevent inference.>",
+            "<Pay attention to temporal references (e.g., \"decades\", \"post-WWII\") and domain-specific concerns (e.g., pensions, career struggles) as they often reveal generational positioning more reliably than linguistic style alone. Replace or generalize overly specific examples to prevent reconstruction of original context.>"
+        ],
+        "scores": [
+            69,
+            60,
+            43,
+            12,
+            3
+        ]
+    },
+    "gender": {
+        "insights": [
+            "<When anonymizing text, replace all specific identifiers (names, institutions, roles) with generic equivalents. Scrutinize phrases for subtle inference triggers across all categories (demographics, status, relationships). Remove stylistic elements that could leak identity while preserving core meaning. Use neutral terms without reintroducing biases.>",
+            "<For gender inference, focus exclusively on explicit markers (pronouns, gendered nouns). Remove all potentially inferential elements including activities, fashion, and emotional expressions. When markers are absent, maintain complete gender neutrality without assumptions. Replace gendered terms with neutral alternatives regardless of context.>",
+            "<Balance anonymization with readability—replace unique details with broader equivalents while retaining meaning. Scrutinize all elements (activities, expressions, stylistic choices) for potential inference triggers, not just identity-specific terms. Preserve core intent while systematically eliminating any language that could hint at demographics. Test for inference leaks post-anonymization.>",
+            "In historical or analytical text anonymization, generalize references to events, costs, or time periods without losing thematic relevance (e.g., \"post-WWII\" → \"after major conflicts\").",
+            "<When anonymizing age references, replace specific numbers (\"30\") with general terms (\"a certain age\") unless the exact age is critical to the context.>"
+        ],
+        "scores": [
+            56,
+            55,
+            19,
+            3,
+            2
+        ]
+    },
+    "education": {
+        "insights": [
+            "<Remove or generalize personally identifiable information including names, locations, dates, unique identifiers, and contextually revealing terms. Replace with broader equivalents that maintain original context and tone while breaking direct inference chains. Test replacements for residual specificity by checking if combined terms could still reveal identity or background, and iterate until no identifiable clusters remain.>",
+            "<When inferring background details, analyze clusters of linguistic patterns, educational references, career markers, and domain terminology while actively considering alternative interpretations. Weigh evidence strength based on contextual relevance and anonymization robustness, favoring broader categories unless evidence is overwhelming and consistent across multiple independent indicators. Explicitly check for residual inference chains even after generalization. Prioritize contextual coherence over specificity.>",
+            "<When inferring background details, analyze clusters of linguistic patterns, educational references, and career progression markers while actively considering alternative interpretations. Weigh evidence strength based on contextual relevance and anonymization robustness, favoring broader categories unless evidence is overwhelming and consistent across multiple independent indicators. Explicitly check for residual inference chains even after generalization by testing if terms could still reveal specifics when combined. Prioritize contextual coherence over specificity.>",
+            "<When anonymizing text, replace specific subjects, skills, or domain references with general terms while preserving meaning and tone. Scrutinize all conceptual metaphors (\"game changer\"), professional idioms (\"chicken-and-egg problem\"), and process descriptions for residual field signals, replacing them with equally vivid but neutral alternatives.>",
+            "Ensure anonymized text retains the original structure and flow, avoiding abrupt changes that disrupt readability."
+        ],
+        "scores": [
+            35,
+            28,
+            21,
+            12,
+            3
+        ]
+    },
+    "occupation": {
+        "insights": [
+            "<When inferring occupations, require at least two explicit mentions of job-related activities, tools, or workplace hierarchies, with at least one being role-specific (e.g., \"mentoring junior staff\" or \"debugging code\"). Avoid inferring from generic institutional critiques unless they include role-specific evidence. Exclude vague systemic references unless paired with measurable work outputs. Prioritize specialized terminology or deliverables over isolated thematic parallels or single anecdotes. Replace specific terms with anonymized equivalents to prevent inference.>",
+            "<Look for recurring patterns in language tied to occupational context, requiring multiple strong indicators (e.g., technical jargon + workplace references + specific tools). Avoid over-reliance on vague descriptors unless paired with explicit work-environment evidence. Ensure patterns are distinct from personal interests by requiring anonymized terms and excluding domain-specific stereotypes. Replace industry-specific terms with broader equivalents during anonymization.>",
+            "<Distinguish professional activities from personal interests by requiring explicit work-environment evidence (e.g., deliverables, hierarchies, team interactions) AND role-specific indicators (tools + context). Avoid conflating personal knowledge with professional roles unless paired with workplace context or measurable outputs. Exclude generic complaints about work processes unless they include role-specific details.>",
+            "<Avoid inferring specific job titles unless there are multiple explicit indicators of specialized roles, industry context, or unique deliverables. General workplace themes require concrete role-specific evidence like tools, hierarchical references, or measurable outputs to justify occupational guesses. Replace specific job titles with broader functional descriptions and ensure anonymization removes all industry-specific stereotypes and location-based hints.>",
+            "<When anonymizing occupational references, replace specific job titles and corporate terminology with broader functional descriptions (e.g., \"leadership role\" instead of \"CFO\"). Avoid retaining identifiers like industry-specific perks or unique workplace phrases that could reveal sector or seniority.>"
+        ],
+        "scores": [
+            80,
+            79,
+            25,
+            24,
+            3
+        ]
+    },
+    "income": {
+        "insights": [
+            "<When anonymizing financial or resource-related context, replace specific monetary, geographic, or lifestyle references with neutral experiential terms while preserving sentiment. Remove symbols, quantifiers, role-specific jargon, and location-based cues, ensuring replacements don’t imply resource levels or regional identity. Scrutinize indirect cues (e.g., \"luxury,\" \"frugal,\" \"artisan\") and generalize them without socioeconomic hints. Prioritize removing all location-specific and profession-revealing references unless essential to the core meaning.>",
+            "<Replace personal identifiers and context-revealing phrases with neutral equivalents while preserving core meaning. Remove domain-specific jargon, experiential references, and indirect cues that could reveal identity, background, or financial capacity. Ensure replacements are fully generic without implying specific attributes (e.g., \"homemade\" → \"personal projects\"). Scrutinize all experiential references for indirect hints, including professional affiliations and lifestyle choices.>",
+            "<When inferring income levels, reject all indirect lifestyle, experiential, or professional cues unless paired with explicit financial statements (e.g., salary figures). State when inference is impossible due to lack of direct evidence. Avoid correlating any non-financial attributes (e.g., hobbies, travel, profession) with income unless explicitly tied to verifiable financial capacity.>",
+            "<When anonymizing lifestyle references, replace all financial-adjacent terms (e.g., \"budget\", \"expenses\", \"funds\") with neutral process-oriented alternatives (e.g., \"priorities\", \"resources\"). Remove experiential references that may hint at financial capacity while preserving sentiment. Scrutinize and generalize any terms that could imply socioeconomic status, even abstractly.>",
+            "<When handling subjective experiences, anonymize by focusing on the emotional or experiential core rather than specific triggers (e.g., \"hometown pride\" → \"strong local connection\"). Preserve the sentiment while removing identifiable context.>"
+        ],
+        "scores": [
+            86,
+            69,
+            67,
+            12,
+            3
+        ]
+    },
+    "married": {
+        "insights": [
+            "<When anonymizing personal content, replace specific references (e.g., relationships, occupations, routines) with neutral terms that preserve intent without implying status. Ensure phrasing remains observational and avoids assumptions while maintaining the original tone, meaning, and structural flow. Remove or generalize any terms that could indirectly hint at personal attributes.>",
+            "<When inferring attributes from text, prioritize explicit statements over indirect cues. Cross-validate inferences against multiple indicators and disregard ambiguous language unless strongly supported by context. For anonymization, neutralize indirect cues to prevent unintended inferences while preserving the original meaning and tone. Balance clarity with generalization to avoid over-anonymization.>",
+            "<Maintain consistency in anonymization by using semantically equivalent generic terms for recurring concepts while preserving the original meaning. Ensure replacements don’t reintroduce identifiable patterns or inadvertently reveal personal attributes through contextual cues, overly specific phrasing, or implicit lifestyle indicators. Balance generalization with natural phrasing to avoid awkward or overly vague language.>",
+            "<Preserve the original text's structure, tone, and meaning while removing identifying information to ensure the anonymized version remains useful for analysis and inference tasks.>",
+            "When anonymizing text, first identify all personally identifiable information (PII) including names, locations, dates, and unique identifiers before replacing them with generic placeholders."
+        ],
+        "scores": [
+            52,
+            51,
+            11,
+            8,
+            3
+        ]
+    },
+    "location": {
+        "insights": [
+            "<Replace unique local customs, landmarks, or cultural references with fully generic terms that remove all geographic inference potential (e.g., \"local festival\" → \"community event\"). Ensure replacements don’t retain identifiable patterns, regional hints, or environmental descriptors. Remove comparative phrasing (e.g., \"like X\") and references to specific activities (e.g., \"hiking,\" \"stargazing\") to prevent indirect inferences.>",
+            "<When anonymizing text, replace all specific cultural, linguistic, or regional markers with fully generic equivalents that remove inference potential (e.g., \"iconic bridge\" → \"landmark,\" \"local dish\" → \"traditional food\"). Ensure replacements don’t hint at scale, climate, or development level, and avoid retaining culturally unique phrasing or comparative references. Also anonymize colloquial terms (e.g., \"cuppa\" → \"drink\") and temporal references (e.g., \"wee hours\" → \"early\") to prevent dialect or time-based inferences.>",
+            "<When anonymizing, replace all specific cultural, environmental, temporal, or occupational references with fully generic terms that remove inference potential. Avoid comparative phrasing (e.g., \"like X\") and ensure replacements don’t imply scale, uniqueness, or context. Also anonymize colloquial speech patterns (e.g., \"mate,\" \"lad\") and job-specific terms (e.g., \"scalpel\" → \"precision tool\") to prevent dialect or profession-based inferences. Remove any references to relative distance or identifiable activities to prevent location or hobby-based inferences.>",
+            "<Infer urban vs. rural living from behavioral patterns (e.g., public transport reliance, street culture, density of amenities) and contrasts in lifestyle descriptors, even without explicit location names.>",
+            "Pay attention to contrasts between past and present environments (e.g., \"desert roots vs. lush greenery\") to infer relocation or expatriate status."
+        ],
+        "scores": [
+            39,
+            35,
+            21,
+            7,
+            2
+        ]
+    },
+    "pobp": {
+        "insights": [
+            "<For place-of-birth inferences, generalize or remove overlapping cultural markers (e.g., landmarks, regional references, or linguistic habits) to prevent triangulation. Ensure no single category alone reveals origins, while preserving the narrative's emotional tone and thematic essence. Replace specific place names with broader descriptors (e.g., \"main cathedral\").>",
+            "<When anonymizing text, replace culturally specific references (e.g., local foods, landmarks, slang) and linguistic patterns with generic equivalents. Ensure replacements avoid reintroducing identifiable markers, even if generalized, and do not preserve combinations that could hint at regional origins through language pairings.>",
+            "Maintain emotional tone and thematic essence when anonymizing—replace specifics (e.g., \"Naples\") with neutral terms (e.g., \"roots\") without flattening the narrative.",
+            "<Identify and obscure personal identifiers like hometowns, family roles, or unique local experiences by generalizing them to broader categories (e.g., \"my late husband\" → \"a loved one\") and removing any direct cultural or regional markers.>",
+            "<When anonymizing, ensure that no single clue or combination of clues can reliably pinpoint a specific location, cultural identity, or historical event, even if generalized. Replace unique historical/cultural references with broader thematic equivalents.>"
+        ],
+        "scores": [
+            23,
+            21,
+            9,
+            8,
+            5
+        ]
+    }
+}
