@@ -1,0 +1,51 @@
+output_dir: results
+seed: 10
+task: ANONYMIZED
+dryrun: false
+save_prompts: true
+timeout: 0.0
+task_config:
+  run_eval_inference: true
+  profile_path: anonymized_results/coding_test/inference_5.jsonl
+  outpath: anonymized_results/coding_test
+  anonymizer:
+    anon_type: llm_coding2
+    target_mode: single
+    max_workers: 4
+    summary_path: summary/coding4/insights_570.json
+  anon_model:
+    name: "merged_model_zi_f3"
+    provider: "openai_slm"
+    args: {
+      temperature: 0.1,
+      attack_model: "merged_model_zi_f3"
+    }
+  inference_model:
+    name: "merged_model_zi_f3"
+    provider: "openai_slm"
+    args: {
+      temperature: 0.1
+    }
+  utility_model:
+    name: deepseek-ai/DeepSeek-V3
+    provider: siliconflow
+    args:
+      temperature: 0.1
+  eval_inference_model:
+    name: deepseek-ai/DeepSeek-V3
+    provider: siliconflow
+    args:
+      temperature: 0.1
+  profile_filter:
+    hardness: 1
+    certainty: 1
+    num_tokens: 1000
+  max_num_iterations: 5
+  use_ner: false
+  offset: 0
+  num_profiles: 500
+gen_model:
+  name: deepseek-ai/DeepSeek-V3
+  provider: siliconflow
+  args:
+    temperature: 0.1

@@ -1,0 +1,48 @@
+output_dir: results
+seed: 10
+task: ANONYMIZED
+dryrun: false
+save_prompts: true
+timeout: 0.0
+task_config:
+  profile_path: data/synthetic/inference_0_train.jsonl
+  outpath: anonymized_results/coding_train
+  anonymizer:
+    anon_type: llm_coding2
+    target_mode: single
+    max_workers: 4
+    summary_path: summary/coding_train/insights_0.json
+  anon_model:
+    name: deepseek-ai/DeepSeek-V3
+    provider: siliconflow
+    args:
+      temperature: 0.1
+      attack_model: deepseek-ai/DeepSeek-V3
+  inference_model:
+    name: deepseek-ai/DeepSeek-V3
+    provider: siliconflow
+    args:
+      temperature: 0.1
+  utility_model:
+    name: deepseek-ai/DeepSeek-V3
+    provider: siliconflow
+    args:
+      temperature: 0.1
+  eval_inference_model:
+    name: deepseek-ai/DeepSeek-V3
+    provider: siliconflow
+    args:
+      temperature: 0.1
+  profile_filter:
+    hardness: 1
+    certainty: 1
+    num_tokens: 1000
+  max_num_iterations: 5
+  use_ner: false
+  offset: 0
+  num_profiles: 10
+gen_model:
+  name: deepseek-ai/DeepSeek-V3
+  provider: siliconflow
+  args:
+    temperature: 0.1
