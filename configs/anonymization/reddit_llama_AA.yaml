@@ -14,7 +14,7 @@ task_config:
 
   anon_model:
     name: "llama3-8b-8192"
-    provider: "openai_llama"
+    provider: "openai_slm"
     args: {
       temperature: 0.1,
       url: "http://localhost:8000",
@@ -22,7 +22,7 @@ task_config:
     }
   inference_model:
     name: "llama3-8b-8192"
-    provider: "openai_llama"
+    provider: "openai_slm"
     args: {
       temperature: 0.1,
       url: "http://localhost:8000"
