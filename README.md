@@ -24,6 +24,8 @@ For example `configs/anonymization/coding_test_LLM.yaml` will run the adaptive w
 
 After having run the anonymization, you can evaluate the inferences using the `configs/anonymization/..._eval.yaml` configs. We generally use DeepSeek-V3 as the judge for these inferences. In case your locally applied judge is already DeepSeek-V3 you may skip the eval_inference config. Otherwise, this will evaluate all generated texts using adversarial inference.
 
+If you want to run an our newly generated data, you can change the "profile_path" to "data/synthetic/new_data.jsonl". 
+
 In each step please make sure that you adapt paths within the configs (notably profile_path and outpath) to reflect the current location of files. (Side note: You will find that as a cost-saving measure, we shared the inferences on fully non-anonymized text).
 
 Below we provide an example workflow for a single run using DeepSeek-V3 on the test set::
@@ -44,11 +46,15 @@ python src/anonymized/evaluate_anonymization.py --in_path anonymized_results/cod
 If you want to use SFT or RL models to run our workflow. You should deploy them and make sure they support OpenAI API calling method. Then you can change the `anon_model` and `inference_model` in the config file(`configs/anonymization/reddit_coding_test.yaml`) to the deployed model. Then you can run `run.sh` to run the workflow.
 
 ## SFT and RL
-We use [LLaMA-Factory](https://llamafactory.readthedocs.io/zh-cn/latest/index.html) to train our SFT model. We use [Llama-3.1-8b- Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) as our base model and provide our train datasets and train configs in folder `llama-factory`. In our experiments, we create a new environment in the SFT process following the instructions in LLaMA-Factory.
+We use [LLaMA-Factory](https://llamafactory.readthedocs.io/zh-cn/latest/index.html) to train our SFT model. We use [Llama-3.1-8b-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) and [Qwen-2.5-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct) as our base model and provide our train datasets and train configs in folder `llama-factory`. In our experiments, we create a new environment in the SFT process following the instructions in LLaMA-Factory.
 We use [Accelerate](https://github.com/huggingface/accelerate) and [Trl](https://github.com/huggingface/trl) to train our RL model. We provide our train datasets and code in folder `rl`. 
-Change the configs in `rl/train.py` to fit your own settings.
-
+`rl/train.py` is used for multi-gpu training and `rl/train_single.py` is used for single-gpu training. You can change the configs to fit your own settings.
 ## Citation
 
 If you use this code, please consider citing our work:
-
+@article{shao2025agentstealth,
+  title={AgentStealth: Reinforcing Large Language Model for Anonymizing User-generated Text},
+  author={Shao, Chenyang and Li, Tianxing and Pu, Chenhao and Xu, Fengli and Li, Yong},
+  journal={arXiv preprint arXiv:2506.22508},
+  year={2025}
+}
