@@ -58,3 +58,12 @@ If you use this code, please consider citing our work:
   journal={arXiv preprint arXiv:2506.22508},
   year={2025}
 }
+
+## Acknowledgements
+
+This project utilizes code and concepts from the following excellent research paper:
+
+> **Language models are advanced anonymizers** > Staab, R., Vero, M., Balunovic, M., \& Vechev, M. (2025).  
+> *The Thirteenth International Conference on Learning Representations (ICLR 2025).*
+
+We are grateful to the authors for making their work publicly available.
